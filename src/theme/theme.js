@@ -1,9 +1,10 @@
 const Theme = {
   fonts: {
-    primary: 'sans-serif'
+    primary: 'sans-serif',
   },
   colors: {
-    primary: '#eee'
+    primary: '#17494d',
+    secondary: '#03363d',
   }
 }
 
