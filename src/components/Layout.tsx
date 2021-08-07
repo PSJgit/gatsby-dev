@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
+import Nav from '../components/Nav/Nav';
 
 type Props = {
   pageTitle: string,
@@ -10,11 +11,7 @@ const Layout = ({ pageTitle, children }: Props) => {
   return (
     <div>
       <title>{pageTitle}</title>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-        </ul>
-      </nav>
+      <Nav/>
       <main>
         <h1>{pageTitle}</h1>
         {children}
