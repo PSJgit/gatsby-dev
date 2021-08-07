@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from "react"
-import { Link } from 'gatsby';
-import { Container } from 'react-grid-system';
-import { StyledNavContainer, StyledSticky } from './StickyNav.styled';
+import React, { useState, useEffect } from "react"
+import { Container, Row, Col } from 'react-grid-system';
+import Logo from '../Logo/Logo';
+import { StyledMainNav, StyledAltNav, StyledSticky } from './StickyNav.styled';
 
 const StickyNav = () => {
 
@@ -22,17 +22,39 @@ const StickyNav = () => {
   return (
     <StyledSticky isSticky={isSticky}>
       <Container>
-        <nav className='main-nav'>
-          <StyledNavContainer>
-            <li>Products</li>
-            <li>Pricing</li>
-            <li>Solutions</li>
-            <li>Demo</li>
-            <li>Services</li>
-            <li>Resources</li>
-            <li>Free Trial</li>
-          </StyledNavContainer>
-        </nav>
+        {!isSticky && 
+          <Row>
+            <Col>
+              <nav className='alt-nav'>
+                <StyledAltNav>
+                  <li>Sign in</li>
+                  <li>Product Support</li>
+                  <li>Company</li>
+                  <li>Contact us</li>
+                  <li>English</li>
+                </StyledAltNav>
+              </nav>
+            </Col>
+          </Row>
+        }
+        <Row>
+          <Col xs={2}>
+            <Logo/>
+          </Col>
+          <Col>
+            <nav className='main-nav'>
+              <StyledMainNav>
+                <li>Products</li>
+                <li>Pricing</li>
+                <li>Solutions</li>
+                <li>Demo</li>
+                <li>Services</li>
+                <li>Resources</li>
+                <li>Free Trial</li>
+              </StyledMainNav>
+            </nav>
+            </Col>
+        </Row>
       </Container>
     </StyledSticky>
   )
