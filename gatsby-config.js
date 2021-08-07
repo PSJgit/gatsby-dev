@@ -7,5 +7,13 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true,
+        jsxPragma: `jsx`,
+        allExtensions: true,
+      },
+    },
   ],
 };
