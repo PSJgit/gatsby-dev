@@ -39,11 +39,11 @@ const StickyNav = () => {
         }
         <Row>
           <Col xs={2}>
-            <Logo/>
+            <Logo isSticky={isSticky}/>
           </Col>
           <Col>
             <nav className='main-nav'>
-              <StyledMainNav>
+              <StyledMainNav isSticky={isSticky}>
                 <li>Products</li>
                 <li>Pricing</li>
                 <li>Solutions</li>
@@ -53,7 +53,7 @@ const StickyNav = () => {
                 <li>Free Trial</li>
               </StyledMainNav>
             </nav>
-            </Col>
+          </Col>
         </Row>
       </Container>
     </StyledSticky>

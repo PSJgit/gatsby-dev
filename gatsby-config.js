@@ -7,6 +7,17 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/ 
+        }
+      }
+    },
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
@@ -23,6 +34,6 @@ module.exports = {
         ],
         display: 'swap'
       }
-    }
+    },
   ],
 };

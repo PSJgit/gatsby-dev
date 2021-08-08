@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
 import StickyNav from '../components/Nav/StickyNav';
 import Hero from '../components/Hero/Hero';
 
