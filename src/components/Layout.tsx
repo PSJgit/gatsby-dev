@@ -1,6 +1,5 @@
-import * as React from 'react';
+import React from 'react';
 import StickyNav from '../components/Nav/StickyNav';
-import Hero from '../components/Hero/Hero';
 
 type Props = {
   pageTitle: string,
@@ -8,13 +7,12 @@ type Props = {
 }
 
 const Layout = ({ pageTitle, children }: Props) => {
+
   return (
     <div>
       <title>{pageTitle}</title>
-      <StickyNav/>
-      <Hero/>
+        <StickyNav/>
       <main>
-        <h1>{pageTitle}</h1>
         {children}
         <p>skhgljsdgsdlgjskdfgmsd</p>
         <p>skhgljsdgsdlgjskdfgmsd</p>

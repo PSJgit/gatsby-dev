@@ -1,14 +1,15 @@
-import * as React from 'react';
+import React from 'react';
 import ZenDeskLogo from '../../assets/zendesk-logo.inline.svg';
 import { StyledLogo } from './Logo.styled';
 
 type Props = {
   isSticky: boolean,
+  isMobile?: boolean,
 }
 
-const Logo = ({ isSticky }: Props) => {
+const Logo = ({ isSticky, isMobile = false }: Props) => {
   return (
-    <StyledLogo isSticky={isSticky}>
+    <StyledLogo isSticky={isSticky} isMobile={isMobile}>
       <ZenDeskLogo/>
     </StyledLogo>
   )
