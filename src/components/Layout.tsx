@@ -14,64 +14,6 @@ const Layout = ({ pageTitle, children }: Props) => {
         <StickyNav/>
       <main>
         {children}
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-        
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-      
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-        
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
-      
-
-        <p>skhgljsdgsdlgjskdfgmsd</p>
       </main>
     </div>
   )
