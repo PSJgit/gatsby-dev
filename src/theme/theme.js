@@ -9,6 +9,7 @@ const Theme = {
     secondary: '#03363d',
     tertiary: '#ece0ce',
     white: '#ffffff',
+    black: '#012b30',
     accent1: '#ce9fb7',
     accent2: '#fed6a8',
     accent3: '#00a656',
@@ -30,6 +31,7 @@ const Theme = {
     bottom: 0,
   },
   breakpoints: {
+    mob: `(min-width: ${breakpoints.mob})`,
     xs: `(min-width: ${breakpoints.xs})`,
     sm: `(min-width: ${breakpoints.sm})`,
     lg: `(min-width: ${breakpoints.lg})`,

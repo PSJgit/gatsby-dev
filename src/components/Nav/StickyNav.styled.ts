@@ -26,8 +26,12 @@ export const StyledMainNav = styled.ul<iSticky>`
     background: ${({ theme, isSticky }) => isSticky ? theme.colors.primary : theme.colors.tertiary};
     color: ${({ theme, isSticky }) => isSticky ? theme.colors.white : theme.colors.secondary};
     transition: ${({ theme }) => theme.transitions.fast};
+    cursor: pointer;
   }
-  & li:after {
+  & li:last-child:hover {
+    background: ${({ theme, isSticky }) => isSticky ? theme.colors.black : theme.colors.white};
+  }
+  & li:not(:last-child):after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";

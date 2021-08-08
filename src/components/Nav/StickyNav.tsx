@@ -8,7 +8,7 @@ import { StyledMainNav, StyledAltNav, StyledSticky, StyledMobileNav, StyledFlex 
 
 const StickyNav = () => {
 
-  const isXs = useMediaQuery({query: `(min-width: ${breakpoints.xs})`});
+  const isMob = useMediaQuery({query: `(min-width: ${breakpoints.mob})`});
   const isSm = useMediaQuery({query: `(min-width: ${breakpoints.sm})`});
 
   const [isSticky, setSticky] = useState(false);
@@ -19,9 +19,9 @@ const StickyNav = () => {
 
   // This should be throttled for better performance
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", () => handleScroll)
+      window.removeEventListener("scroll", () => handleScroll);
     }
   }, [])
 
@@ -66,7 +66,7 @@ const StickyNav = () => {
           </Container>
         </StyledSticky>
       }
-      {(isXs && !isSm) && 
+      {(isMob && !isSm) && 
         <StyledSticky isSticky={isSticky}>
           <StyledMobileNav>
             <Logo isSticky={isSticky} isMobile/>
