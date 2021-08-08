@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const StyledSection = styled.section`
   background: ${({ theme }) => theme.colors.primary};
@@ -7,7 +7,9 @@ export const StyledSection = styled.section`
 `;
 
 export const StyledHeroText = styled.div`
-  font-size: 50px;
+  font-size: 72px;
+  font-weight: bold;
+  color: #ce9fb7;
 `;
 
 export const StyledSideHero = styled.div`
@@ -17,6 +19,7 @@ export const StyledSideHero = styled.div`
   & p {
     margin-bottom: 24px;
   }
+  padding-top: 50px;
 `;
 
 export const StyledButton = styled.div`

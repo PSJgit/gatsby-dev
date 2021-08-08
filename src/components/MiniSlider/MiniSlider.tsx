@@ -1,39 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import styled, { css, keyframes } from 'styled-components';
+import { StyledContainer, StyledSlide } from './MiniSlider.styled';
 
 type Props = {
   autoPlayInterval: number,
-  content: string[],
-  callback?: () => void
+  content: Content[],
+  callback?: () => void,
+  delay?: number,
 }
 
-const Container = styled.div`
-  overflow: hidden;
-  position: relative;
-  height: 75px;
-`;
-
-
-interface iSlide {
-  animateOn: boolean,
+type Content = {
+  text: string,
+  color: string,
 }
-
-const animateTop = () => keyframes`
-  from { top: -100px }
-  to { top: 0px }
-`;
-
-const StyledSlide = styled.div<iSlide>`
-  height: auto;
-  width: auto;
-  transition: 750ms all ease-in-out;
-  position: absolute;
-  top: 100px;
-  ${({ animateOn }) => animateOn && css`
-    animation-name: ${animateTop()};
-    top: 0;
-  `}
-`;
 
 const MiniSlider = ({ autoPlayInterval, content }: Props) => {
 
@@ -49,6 +27,7 @@ const MiniSlider = ({ autoPlayInterval, content }: Props) => {
     }
   }
 
+
   useEffect(() => {
     const timer = setTimeout(() => {
       nextSlide();
@@ -58,13 +37,13 @@ const MiniSlider = ({ autoPlayInterval, content }: Props) => {
   }, [current]);
 
   return (
-    <Container>
-      {content.map((item, index) => (
-        <StyledSlide key={index} animateOn={index === current} >
-          {item}
+    <StyledContainer>
+      {content.map((content, index) => (
+        <StyledSlide key={index} animateOn={index === current} color={content.color}>
+          {content.text}
         </StyledSlide>
       ))}
-    </Container>
+    </StyledContainer>
   );
 };
 

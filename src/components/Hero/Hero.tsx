@@ -3,8 +3,25 @@ import { Container, Row, Col } from 'react-grid-system';
 import { StyledSection, StyledHeroText, StyledSideHero, StyledButton, StyledButtonGhost, StyledButtonContainer } from './Hero.styled';
 import MiniSlider from '../MiniSlider/MiniSlider';
 
-const heroContent = ['customer', 'no-hassle', 'not waiting on', 'social', 'extra sauce', 'actually having', 'customer'];
-const heroContent2 = ['service', 'returns', 'hold forever', 'messaging', 'on the side', 'a nice day', 'service']
+const heroContent = [
+  {text: 'customer', color: '#00a656'},
+  {text: 'no-hassle', color: '#00a656'},
+  {text: 'not waiting on', color: '#efc93d'},
+  {text: 'social', color: '#bdd9d7'},
+  {text: 'extra sauce', color: '#f79a3e'},
+  {text: 'actually having', color: '#30aabc'},
+  {text: 'customer', color: '#00a656'}
+];
+
+const heroContent2 = [
+  {text: 'service', color: '#30aabc'},
+  {text: 'returns', color: '#00a656'},
+  {text: 'hold forever', color: '#efc93d'},
+  {text: 'messaging', color: '#bdd9d7'},
+  {text: 'on the side', color: '#bdd9d7'},
+  {text: 'a nice day', color: '#30aabc'},
+  {text: 'service', color: '#30aabc'}
+]
 
 const Hero = () => {
   return (
@@ -13,8 +30,7 @@ const Hero = () => {
         <Row>
           <Col>
             <StyledHeroText>
-              Champions
-              <span>of</span>
+              <p>Champions of</p>
               <MiniSlider autoPlayInterval={1000} content={heroContent}/>
               <MiniSlider autoPlayInterval={1000} content={heroContent2}/>
             </StyledHeroText>

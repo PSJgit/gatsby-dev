@@ -7,7 +7,6 @@ type Props = {
 }
 
 const Layout = ({ pageTitle, children }: Props) => {
-
   return (
     <div>
       <title>{pageTitle}</title>
