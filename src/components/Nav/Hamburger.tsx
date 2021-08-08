@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyledHamburger } from './Hamburger.styled';
 
-type Props = {
-  isActive: boolean,
-}
+const Hamburger = () => {
 
-const Hamburger = ({ isActive }: Props) => {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = () => {
+    setIsActive(!isActive)
+  }
+
   return (
-   <StyledHamburger isActive={isActive}>hambuger</StyledHamburger>
+   <StyledHamburger onClick={handleClick} isActive={isActive}>
+      <span className='line'></span>
+      <span className='line'></span>
+      <span className='line'></span>
+   </StyledHamburger>
   )
 }
 

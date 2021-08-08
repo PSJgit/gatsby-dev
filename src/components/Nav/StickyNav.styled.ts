@@ -67,6 +67,20 @@ export const StyledSticky = styled.div<iSticky>`
 `;
 
 export const StyledMobileNav = styled.div`
+  background: ${({ theme }) => theme.colors.white};
+  display: flex;
   padding: 16px;
   height: 62px;
-`
+  align-items: center;
+  & p {
+    color: ${({ theme }) => theme.colors.primary};
+    font-weight: bold;
+    margin-right: 16px;
+  }
+`;
+
+export const StyledFlex = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+`;

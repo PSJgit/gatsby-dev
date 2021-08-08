@@ -19,6 +19,10 @@ const GlobalReset = createGlobalStyle`
     letter-spacing: 0;
     background-color: '#f7fafc';
   }
+  button {
+    border: 0;
+    background: none;
+  }
 `;
 
 export default GlobalReset;

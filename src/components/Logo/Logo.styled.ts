@@ -19,5 +19,9 @@ export const StyledLogo = styled.div<iLogo>`
   ${({ isMobile }) => isMobile && css`
     height: 25px;
     padding: 0;
+    display: flex;
+    & .st0 {
+      fill: ${({ theme }) => theme.colors.primary};
+    }
   `}
 `;

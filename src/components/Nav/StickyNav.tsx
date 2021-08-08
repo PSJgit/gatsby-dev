@@ -4,14 +4,13 @@ import { useMediaQuery } from 'react-responsive';
 import breakpoints from '../../theme/breakpoints/breakpoints';
 import Logo from '../Logo/Logo';
 import Hamburger from "./Hamburger";
-import { StyledMainNav, StyledAltNav, StyledSticky, StyledMobileNav } from './StickyNav.styled';
+import { StyledMainNav, StyledAltNav, StyledSticky, StyledMobileNav, StyledFlex } from './StickyNav.styled';
 
 const StickyNav = () => {
 
   const isXs = useMediaQuery({query: `(min-width: ${breakpoints.xs})`});
   const isSm = useMediaQuery({query: `(min-width: ${breakpoints.sm})`});
 
-  const [isActive, setIsActive] = useState(false);
   const [isSticky, setSticky] = useState(false);
 
   const handleScroll = () => {
@@ -71,7 +70,10 @@ const StickyNav = () => {
         <StyledSticky isSticky={isSticky}>
           <StyledMobileNav>
             <Logo isSticky={isSticky} isMobile/>
-            <Hamburger isActive={isActive}/>
+            <StyledFlex>
+              <p>Contact Us</p>
+              <Hamburger />
+            </StyledFlex>
           </StyledMobileNav>
         </StyledSticky>
       }
